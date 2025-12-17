@@ -1,0 +1,145 @@
+:root{
+  --bg-main: #FAF7F2;
+  --bg-card: #F2EEE7;
+
+  --text-main: #6F5B3E;
+  --text-muted: #A68B6B;
+
+  --accent-primary: #A8B6A1;
+  --accent-secondary: #7F8F75;
+  --accent-dark: #4F5F4A;
+
+  --border-soft: #C8B7A6;
+   
+}
+
+#sage{
+    color: #4F5F4A;
+}
+
+.pretty{
+    font-family:cursive;
+    font-size: 14px;
+}
+
+h2{
+    text-decoration: underline;
+    font-style: italic;
+    font-weight: bold;
+}
+
+h3{
+    text-decoration: underline;
+    font-style: italic;
+    font-weight: bold;
+}
+
+h4{
+    text-decoration: underline;
+    font-style: italic;
+    font-weight: bold;
+}
+
+body{
+    background-color: #C8B7A6;
+    font-family:Georgia;
+    Color: #2A241C;
+}
+
+.common{
+    background-color: #E7E0D8;
+    border: 2px solid #6F5B3E;
+    position: absolute;
+}
+
+.header{
+    top:35px;
+    left:400px;
+    right:400px;
+    height:70px;
+    text-align: center;
+}
+
+.sub{
+    top:113px;
+    left:280px;
+    right:280px;
+    height:60px;
+    text-align: center;
+}
+
+.note{
+    top:182px;
+    left:5px;
+    right:5px;
+    height:150px;
+    
+}
+
+.image-row{
+    position: absolute;
+    top: 360px;             
+    left: 150px;
+    right: 150px;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.image-row img{
+    width: 23%;
+    border: 2px solid #C8B7A6;
+}
+
+
+.left-menu{
+    top:630px;
+    left:5px;
+    width:288px;
+    height: 730px;
+    text-align: left;
+}
+
+.main-body{
+    top:630px;
+    left:300px;
+    right:300px;
+    height: 730px;
+}
+.right-menu{
+    top:630px;
+    right:5px;
+    width:288px;
+    height: 730px;
+    text-align: left;
+}
+
+.video-section{
+    top: 1370px;          
+    left: 5px;
+    right: 5px;
+    height: 340px;
+    text-align: center;
+}
+
+.video-section iframe{
+    width: 70%;
+    height: 260px;
+    border: 2px solid #C8B7A6;
+}
+
+.tableau-section{
+    top: 1722px;      
+    left: 5px;
+    right: 5px;
+    height: 950px;
+    text-align: center;
+}
+
+.footer{
+    left:5px;
+    right:5px;
+    margin-top: 2660px;
+    height: 80px;
+}

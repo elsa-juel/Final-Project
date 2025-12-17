@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baguette Snake</title>
+  <link rel="stylesheet" href="styles/gamestyles.css" />
+</head>
+
+<body>
+  <main class="wrap">
+    <header class="card hero">
+      <h1>🥖 Baguette Snake</h1>
+      <p class="subtitle">Eat butter 🧈, grow your baguette, don’t crash.</p>
+
+      <div class="row">
+        <div class="chip">⬅️⬆️➡️⬇️ Move</div>
+        <div class="chip">Space Pause</div>
+        <div class="chip">R Restart</div>
+      </div>
+
+      <div class="hud">
+        <div class="stat">Butter eaten: <span id="score">0</span></div>
+        <div class="stat" id="status">Ready to bake.</div>
+      </div>
+    </header>
+
+    <section class="card">
+      <canvas id="game" width="480" height="360" aria-label="Baguette Snake game"></canvas>
+    </section>
+
+    <footer class="footer">
+      <p>Built with HTML/CSS + JavaScript</p>
+    </footer>
+  </main>
+
+  <script src="baguette_snake.js"></script>
+</body>
+</html>

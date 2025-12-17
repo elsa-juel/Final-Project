@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elsa Christensen | About Me</title>
+  <style>
+    :root{
+      --bg: #0b1220;
+      --card: rgba(255,255,255,0.08);
+      --text: rgba(255,255,255,0.92);
+      --muted: rgba(255,255,255,0.72);
+      --line: rgba(255,255,255,0.16);
+      --shadow: 0 14px 40px rgba(0,0,0,0.35);
+      --accent: rgba(121,215,255,0.85);
+      --accent2: rgba(182,255,207,0.75);
+    }
+
+    *{ box-sizing: border-box; }
+    body{
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(900px 500px at 15% 10%, rgba(121,215,255,0.18), transparent 60%),
+        radial-gradient(800px 500px at 85% 25%, rgba(182,255,207,0.14), transparent 55%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    a{ color: inherit; }
+    .wrap{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 40px 18px 70px;
+    }
+
+    header{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      padding: 28px;
+      border: 1px solid var(--line);
+      background: var(--card);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+
+    .top{
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .brand{
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 280px;
+    }
+
+    .avatar{
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background-image: url("images/HEADSHOT.jpg"); 
+      background-size: cover;
+      background-position: center;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255,255,255,0.28);
+    }
+
+    h1{
+      margin: 0;
+      font-size: 1.6rem;
+      letter-spacing: 0.2px;
+    }
+    .subtitle{
+      margin: 2px 0 0;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    nav{
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    nav a{
+      text-decoration: none;
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+    }
+    nav a:hover{ background: rgba(255,255,255,0.10); }
+
+    .contact{
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-top: 8px;
+    }
+    .contact span{
+      padding: 6px 10px;
+      border: 1px dashed rgba(255,255,255,0.20);
+      border-radius: 10px;
+      background: rgba(0,0,0,0.12);
+    }
+
+    main{
+      margin-top: 18px;
+      display: grid;
+      gap: 18px;
+    }
+
+    .grid{
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 18px;
+    }
+    @media (max-width: 900px){
+      .grid{ grid-template-columns: 1fr; }
+    }
+
+    section{
+      border: 1px solid var(--line);
+      background: var(--card);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 22px;
+      backdrop-filter: blur(10px);
+    }
+
+    h2{
+      margin: 0 0 12px;
+      font-size: 1.1rem;
+      letter-spacing: 0.2px;
+    }
+
+    .pillrow{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .pill{
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.16);
+      background: rgba(0,0,0,0.10);
+      color: rgba(255,255,255,0.85);
+      font-size: 0.92rem;
+    }
+
+    .entry{
+      padding: 14px 0;
+      border-top: 1px solid rgba(255,255,255,0.12);
+    }
+    .entry:first-of-type{ border-top: none; padding-top: 0; }
+
+    .roleline{
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .role{
+      font-weight: 650;
+    }
+    .meta{
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    ul{
+      margin: 10px 0 0 18px;
+      color: rgba(255,255,255,0.86);
+    }
+    li{ margin: 6px 0; }
+
+    footer{
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      text-align: center;
+    }
+
+    .accentline{
+      height: 2px;
+      width: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      opacity: 0.85;
+      margin: 10px 0 4px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="top">
+        <div class="brand">
+          <div class="avatar" aria-label="Headshot"></div>
+          <div>
+            <h1>Elsa Christensen</h1>
+            <p class="subtitle">BYU Pre-Business Student | Operations, E-commerce, Analytics</p>
+          </div>
+        </div>
+
+        <nav aria-label="Page sections">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#education">Education</a>
+          <a href="#skills">Skills</a>
+          <a href="#service">Service</a>
+        </nav>
+      </div>
+
+      <div class="accentline"></div>
+
+      <div class="contact" aria-label="Contact info">
+        <span>📞 (555) 555-5555</span>
+        <span>✉️ elsachristensen@email.com</span>
+        <span>🔗 <a href="https://linkedin.com/elsachristensen" target="_blank" rel="noopener">linkedin.com/elsachristensen</a></span>
+      </div>
+    </header>
+
+    <main>
+      <div class="grid">
+        <section id="about">
+          <h2>About Me</h2>
+          <p>
+            I’m a BYU pre-business student with hands-on experience supporting cross-functional operations,
+            e-commerce, and data-driven decision-making. I’ve worked closely with leadership teams to build
+            and launch programs, streamline workflows, and create reporting tools that help teams move faster
+            and make better choices.
+          </p>
+          <p>
+            I’m especially interested in roles that combine operations, analytics, and customer-facing execution—
+            where I can own projects end-to-end and collaborate across teams.
+          </p>
+
+          <div class="pillrow" aria-label="Highlights">
+            <div class="pill">Operations & Cross-functional Support</div>
+            <div class="pill">Dashboards & Reporting</div>
+            <div class="pill">E-commerce Merchandising</div>
+            <div class="pill">Program Design & Launch</div>
+            <div class="pill">SEO & Product Copy</div>
+          </div>
+        </section>
+
+        <section id="skills">
+          <h2>Skills</h2>
+          <div class="pillrow" aria-label="Technical skills">
+            <div class="pill">Database Modeling</div>
+            <div class="pill">Flowcharting</div>
+            <div class="pill">Tableau</div>
+            <div class="pill">Web Development (HTML, CSS)</div>
+            <div class="pill">Excel Automation (VBA)</div>
+            <div class="pill">Solver (Excel Optimization)</div>
+            <div class="pill">Looker Studio (Dashboards & Financial Reporting)</div>
+            <div class="pill">Shopify (Merchandising & SEO)</div>
+            <div class="pill">ShopMy (Ambassador Management)</div>
+            <div class="pill">Python</div>
+            <div class="pill">SQL</div>
+            <div class="pill">Microsoft Excel</div>
+          </div>
+
+          <h2 style="margin-top:16px;">Languages</h2>
+          <div class="pillrow">
+            <div class="pill">Spanish</div>
+          </div>
+        </section>
+      </div>
+
+      <section id="experience">
+        <h2>Experience</h2>
+
+        <div class="entry">
+          <div class="roleline">
+            <div class="role">Operations Intern — Ivy City</div>
+            <div class="meta">Riverton, UT | Jan–Nov 2025</div>
+          </div>
+          <ul>
+            <li>Supported cross-functional operations across HR, e-commerce, finance, creative, and social media teams.</li>
+            <li>Updated and maintained real-time financial dashboards and calculators in Looker Studio to support daily decision-making.</li>
+            <li>Wrote SEO-optimized product descriptions for 12 product launches over six months and supported Shopify merchandising.</li>
+            <li>Collaborated with executive leadership to design and launch a College Ambassadors Program; attracted 100 applicants within 48 hours.</li>
+            <li>Designed launch page, email coordination, application workflow, and review criteria; pre-screened 118 applicants and managed gifting for 25 accepted ambassadors via ShopMy.</li>
+            <li>Secured Ivy City product placement in the BYU Bookstore, contributing to an average of $1,500 in weekly bookstore revenue.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="roleline">
+            <div class="role">Public Relations Intern — Jonathan Simkhai</div>
+            <div class="meta">Beverly Hills, CA | Jun–Jul 2022</div>
+          </div>
+          <ul>
+            <li>Managed influencer outreach and coordinated sample requests.</li>
+            <li>Organized and tracked sample inventory, improving showroom efficiency and accuracy.</li>
+            <li>Supported buyer visits and internal communications across sales and PR teams.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="roleline">
+            <div class="role">New York Fashion Week Intern — Jonathan Simkhai</div>
+            <div class="meta">New York, NY | Feb 2022</div>
+          </div>
+          <ul>
+            <li>Supported logistics and operations for interactive runway shows during New York Fashion Week.</li>
+            <li>Assisted designers, models, and sales representatives to ensure smooth backstage and showroom execution.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <div class="entry" style="padding-bottom:0;">
+          <div class="roleline">
+            <div class="role">Brigham Young University</div>
+            <div class="meta">Provo, UT | Jan 2023–Present</div>
+          </div>
+          <div class="meta">Pre-business Major (GPA: 3.46)</div>
+        </div>
+      </section>
+
+      <section id="service">
+        <h2>Service</h2>
+        <div class="entry" style="padding-bottom:0;">
+          <div class="roleline">
+            <div class="role">Volunteer Representative — The Church of Jesus Christ of Latter-day Saints</div>
+            <div class="meta">Everett, WA | Jun 2023 – Dec 2024</div>
+          </div>
+          <ul>
+            <li>Managed digital content and referrals for the Spanish volunteers’ Facebook page “Venid a Cristo en Seattle” (13K+ followers).</li>
+            <li>Led a response team handling online inquiries and engagement.</li>
+            <li>Designed and led virtual yoga sessions three times weekly to support volunteer mental and physical well-being.</li>
+          </ul>
+        </div>
+      </section>
+
+      <footer>
+        © <span id="year"></span> Elsa Christensen • Built with HTML & CSS
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
